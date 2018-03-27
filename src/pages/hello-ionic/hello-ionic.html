@@ -12,13 +12,13 @@
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 
   <ion-segment [(ngModel)]="bar">
-    <ion-segment-button value="Categories">
+    <ion-segment-button value="Categories" (click)="goToCategories($event)">
       Categories
     </ion-segment-button>
-    <ion-segment-button value="Top">
+    <ion-segment-button value="Top seling" (click)="goToTopSelingProduct($event)">
       Top seling
     </ion-segment-button>
-    <ion-segment-button value="New">
+    <ion-segment-button value="New" (click)="goToNewProductPage($event)">
       New products
     </ion-segment-button>
   </ion-segment>

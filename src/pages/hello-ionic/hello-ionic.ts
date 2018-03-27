@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { CategoriesPage } from '../categories/categories';
+
+import { NavController, NavParams } from 'ionic-angular';
+import { NewProductPage } from '../new-product/new-product';
+import { TopSelingProductPage } from '../top-seling/top-seling';
 
 @Component({
   selector: 'page-hello-ionic',
@@ -8,7 +13,7 @@ export class HelloIonicPage {
   bar:string;
   items; 
 
-  constructor() {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.initializeItems();
   }
 
@@ -33,6 +38,23 @@ export class HelloIonicPage {
       this.items = this.items.filter((item) => {
         return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
-    }
+    };  
+  }
+
+  goToCategories(event){
+    this.navCtrl.push(CategoriesPage,{ 
+    })
+  }
+  
+  goToTopSelingProduct(event){
+    this.navCtrl.push(TopSelingProductPage,{
+
+    })
+  }
+
+  goToNewProductPage(event){
+    this.navCtrl.push(NewProductPage,{
+
+    })
   }
 }

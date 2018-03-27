@@ -9,13 +9,19 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { CategoriesPage } from '../pages/categories/categories';
+import { NewProductPage } from '../pages/new-product/new-product';
+import { TopSelingProductPage } from '../pages/top-seling/top-seling';
 
 @NgModule({
   declarations: [
     MyApp,
     HelloIonicPage,
     ItemDetailsPage,
-    ListPage
+    ListPage,
+    CategoriesPage,
+    NewProductPage,
+    TopSelingProductPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +32,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HelloIonicPage,
     ItemDetailsPage,
-    ListPage
+    ListPage,
+    CategoriesPage,
+    NewProductPage,
+    TopSelingProductPage
   ],
   providers: [
     StatusBar,

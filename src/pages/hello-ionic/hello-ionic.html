@@ -3,36 +3,86 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title >Готовь с удовольствием</ion-title>
+    <ion-title>Готовим с удовольствием</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content>
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-  <ion-segment [(ngModel)]="bar">
-    <ion-segment-button value="Categories" (click)="goToCategories($event)">
-      Категории
-    </ion-segment-button>
-    <ion-segment-button value="Popular" (click)="goToPopularProduct($event)">
+  <!--   <ion-segment [(ngModel)]="bar">
+ -->
+  <!-- <ion-segment-button value="Popular" (click)="goToPopularProduct($event)">
       Популярные
+    </ion-segment-button> -->
+  <ion-card>
+
+    <img src="https://rud.ua/uploads/recipe/56b30a2a72f64.png" />
+
+    <ion-card-content>
+      <ion-card-title (click)="goToSaladPage($event)">
+        Салаты и закуски
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+
+    <img src="https://rud.ua/uploads/recipe/56b30ea7ef29b.png" />
+
+    <ion-card-content>
+      <ion-card-title (click)="goToDesertsPage($event)">
+        Десерты
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+
+    <img src="https://rud.ua/uploads/default/default-recipe.jpg" />
+
+    <ion-card-content>
+      <ion-card-title (click)="goToSoupsPage($event)">
+        Первые блюда
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+
+    <img src="https://rud.ua/uploads/recipe/56b30c139cb48.png" />
+
+    <ion-card-content>
+      <ion-card-title (click)="goToBakeryPage($event)">
+        Выпечка
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+
+    <img src="https://rud.ua/uploads/recipe/56b305982c12e.png" />
+
+    <ion-card-content>
+      <ion-card-title (click)="goToDrinksPage($event)">
+        Напитки
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+  <!-- <ion-segment-button value="Salad" (click)="goToSaladPage($event)">
+      Салаты и закуски
     </ion-segment-button>
-    <ion-segment-button value="Salad" (click)="goToSaladPage($event)">
-      Салаты
-    </ion-segment-button>
-    <ion-segment-button value="Deserts" (click)=" goToDesertsPage($event)">
+    <ion-segment-button value="Deserts" (click)="goToDesertsPage($event)">
       Десерты
     </ion-segment-button>
     <ion-segment-button value="Soups" (click)="goToSoupsPage($event)">
-      Супы
+      Первые блюда
     </ion-segment-button>
     <ion-segment-button value="Bakery" (click)="goToBakeryPage($event)">
       Выпечка
     </ion-segment-button>
-  </ion-segment>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      {{ item }}
-    </ion-item>
-  </ion-list>
+    <ion-segment-button value="Drink" (click)="goToDrinksPage($event)">
+      Напитки
+    </ion-segment-button> -->
+
+  <!--   </ion-segment>
+ -->
+
+
 </ion-content>

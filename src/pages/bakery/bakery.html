@@ -1,20 +1,51 @@
 <ion-header>
-    <ion-navbar>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title align="center">Выпечка</ion-title>
-    </ion-navbar>
-  </ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title align="center">Выпечка</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+    <img src="https://rud.ua/uploads/recipe/56b30e2ac778d.png" />
+
+    <ion-card-content>
+      <ion-card-title (click)="goToRecipeOnePage($event)">
+        Яблочный пирог в мультиварке
+      </ion-card-title>
+      <!-- <p>
+            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+          </p> -->
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+
+    <img src="https://rud.ua/uploads/recipe/56b30c139cb48.png" />
+
+    <ion-card-content>
+      <ion-card-title>
+        Рецепт хлеба в мультиварке
+      </ion-card-title>
+      <!-- <p>
+              The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+            </p> -->
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+
+      <img src="https://rud.ua/uploads/default/default-recipe.jpg" />
   
-  <ion-content>
-    <ion-list>
-      <button ion-item  >
-        <ion-icon  item-left></ion-icon>
-        <div class="item-note" item-right>
-          <p>Тут будут рецепты Выпечки</p>
-        </div>
-      </button>
-    </ion-list>
-  </ion-content>
-  
+      <ion-card-content>
+        <ion-card-title>
+          Пирог со шпинатом
+        </ion-card-title>
+        <!-- <p>
+                <img src="https://rud.ua/uploads/under_recipe/208.jpg"/>
+                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+              </p> -->
+      </ion-card-content>
+    </ion-card>
+</ion-content>

@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { CategoriesPage } from '../categories/categories';
 
 import { NavController, NavParams } from 'ionic-angular';
-import { PopularPage } from '../popular/popular';
+//import { PopularPage } from '../popular/popular';
 import { SaladPage } from '../salad/salad';
 import { DesertsPage } from '../deserts/deserts';
 import { SoupsPage } from '../soups/soups';
 import { BakeryPage } from '../bakery/bakery';
+import { DrinksPage } from '../drinks/drinks';
 
 @Component({
   selector: 'page-hello-ionic',
@@ -21,12 +21,12 @@ export class HelloIonicPage {
   }
 
   initializeItems() {
-    this.items = [
+   /*  this.items = [
       'Apple',
       'Samsung',
       'Huawei',
-      'Windows Phone' 
-    ];
+      'Windows Phone'
+    ]; */
   }
 
   getItems(ev) {
@@ -44,16 +44,11 @@ export class HelloIonicPage {
     };  
   }
 
-  goToCategories(event){
-    this.navCtrl.push(CategoriesPage,{ 
-    })
-  }
-
-  goToPopularProduct(event){
+ /*  goToPopularProduct(event){
     this.navCtrl.push(PopularPage,{
 
     })
-  }
+  } */
   
   goToSaladPage(event){
     this.navCtrl.push(SaladPage,{
@@ -73,5 +68,9 @@ export class HelloIonicPage {
     this.navCtrl.push(BakeryPage)
   }
 
+  goToDrinksPage(event){
+    this.navCtrl.push(DrinksPage)
+  }
+
  
-}
+} 

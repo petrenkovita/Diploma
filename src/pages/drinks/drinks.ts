@@ -4,15 +4,15 @@ import { NavController, NavParams } from 'ionic-angular';
 
 
 @Component({
-  selector: 'categories-page',
-  templateUrl: 'categories.html'
+  selector: 'drinks',
+  templateUrl: 'drinks.html'
 })
-export class CategoriesPage {
-    category: String[];
+export class DrinksPage {
+    top: String[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     // If we navigated to this page, we will have an item available as a nav param
-    this.category = navParams.get('category');
+    this.top = navParams.get('top');
   
   }
 }

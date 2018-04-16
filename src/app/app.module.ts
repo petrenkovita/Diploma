@@ -9,12 +9,13 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { CategoriesPage } from '../pages/categories/categories';
 import { PopularPage } from '../pages/popular/popular';
 import { SaladPage } from '../pages/salad/salad';
 import { DesertsPage } from '../pages/deserts/deserts';
 import { SoupsPage } from '../pages/soups/soups';
 import { BakeryPage } from '../pages/bakery/bakery';
+import { DrinksPage } from '../pages/drinks/drinks';
+import { RecipeOnePage } from '../pages/bakery/recipe1';
 
 @NgModule({
   declarations: [
@@ -22,12 +23,13 @@ import { BakeryPage } from '../pages/bakery/bakery';
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    CategoriesPage,
     PopularPage,
     SaladPage,
     DesertsPage,
     SoupsPage,
-    BakeryPage
+    BakeryPage,
+    DrinksPage,
+    RecipeOnePage
   ],
   imports: [
     BrowserModule,
@@ -39,12 +41,13 @@ import { BakeryPage } from '../pages/bakery/bakery';
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    CategoriesPage,
     PopularPage,
     SaladPage,
     DesertsPage,
     SoupsPage,
-    BakeryPage
+    BakeryPage,
+    DrinksPage,
+    RecipeOnePage
   ],
   providers: [
     StatusBar,

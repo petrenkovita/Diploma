@@ -10,8 +10,11 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { CategoriesPage } from '../pages/categories/categories';
-import { NewProductPage } from '../pages/new-product/new-product';
-import { TopSelingProductPage } from '../pages/top-seling/top-seling';
+import { PopularPage } from '../pages/popular/popular';
+import { SaladPage } from '../pages/salad/salad';
+import { DesertsPage } from '../pages/deserts/deserts';
+import { SoupsPage } from '../pages/soups/soups';
+import { BakeryPage } from '../pages/bakery/bakery';
 
 @NgModule({
   declarations: [
@@ -20,8 +23,11 @@ import { TopSelingProductPage } from '../pages/top-seling/top-seling';
     ItemDetailsPage,
     ListPage,
     CategoriesPage,
-    NewProductPage,
-    TopSelingProductPage
+    PopularPage,
+    SaladPage,
+    DesertsPage,
+    SoupsPage,
+    BakeryPage
   ],
   imports: [
     BrowserModule,
@@ -34,8 +40,11 @@ import { TopSelingProductPage } from '../pages/top-seling/top-seling';
     ItemDetailsPage,
     ListPage,
     CategoriesPage,
-    NewProductPage,
-    TopSelingProductPage
+    PopularPage,
+    SaladPage,
+    DesertsPage,
+    SoupsPage,
+    BakeryPage
   ],
   providers: [
     StatusBar,

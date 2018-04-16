@@ -4,10 +4,10 @@ import { NavController, NavParams } from 'ionic-angular';
 
 
 @Component({
-  selector: 'top-seling-page',
-  templateUrl: 'top-seling.html'
+  selector: 'desert',
+  templateUrl: 'deserts.html'
 })
-export class TopSelingProductPage {
+export class DesertsPage {
     top: String[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

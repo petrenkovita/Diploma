@@ -2,8 +2,11 @@ import { Component } from '@angular/core';
 import { CategoriesPage } from '../categories/categories';
 
 import { NavController, NavParams } from 'ionic-angular';
-import { NewProductPage } from '../new-product/new-product';
-import { TopSelingProductPage } from '../top-seling/top-seling';
+import { PopularPage } from '../popular/popular';
+import { SaladPage } from '../salad/salad';
+import { DesertsPage } from '../deserts/deserts';
+import { SoupsPage } from '../soups/soups';
+import { BakeryPage } from '../bakery/bakery';
 
 @Component({
   selector: 'page-hello-ionic',
@@ -45,16 +48,30 @@ export class HelloIonicPage {
     this.navCtrl.push(CategoriesPage,{ 
     })
   }
+
+  goToPopularProduct(event){
+    this.navCtrl.push(PopularPage,{
+
+    })
+  }
   
-  goToTopSelingProduct(event){
-    this.navCtrl.push(TopSelingProductPage,{
+  goToSaladPage(event){
+    this.navCtrl.push(SaladPage,{
 
     })
   }
 
-  goToNewProductPage(event){
-    this.navCtrl.push(NewProductPage,{
-
-    })
+  goToDesertsPage(event){
+    this.navCtrl.push(DesertsPage)
   }
+
+  goToSoupsPage(event){
+    this.navCtrl.push(SoupsPage)
+  }
+
+  goToBakeryPage(event){
+    this.navCtrl.push(BakeryPage)
+  }
+
+ 
 }

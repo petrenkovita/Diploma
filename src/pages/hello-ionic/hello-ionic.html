@@ -3,23 +3,31 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Choose and buy</ion-title>
+    <ion-title >Готовь с удовольствием</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content>
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-
   <ion-segment [(ngModel)]="bar">
     <ion-segment-button value="Categories" (click)="goToCategories($event)">
-      Categories
+      Категории
     </ion-segment-button>
-    <ion-segment-button value="Top seling" (click)="goToTopSelingProduct($event)">
-      Top seling
+    <ion-segment-button value="Popular" (click)="goToPopularProduct($event)">
+      Популярные
     </ion-segment-button>
-    <ion-segment-button value="New" (click)="goToNewProductPage($event)">
-      New products
+    <ion-segment-button value="Salad" (click)="goToSaladPage($event)">
+      Салаты
+    </ion-segment-button>
+    <ion-segment-button value="Deserts" (click)=" goToDesertsPage($event)">
+      Десерты
+    </ion-segment-button>
+    <ion-segment-button value="Soups" (click)="goToSoupsPage($event)">
+      Супы
+    </ion-segment-button>
+    <ion-segment-button value="Bakery" (click)="goToBakeryPage($event)">
+      Выпечка
     </ion-segment-button>
   </ion-segment>
   <ion-list>

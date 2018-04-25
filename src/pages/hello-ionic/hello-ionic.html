@@ -19,10 +19,17 @@
 
     <img src="https://rud.ua/uploads/recipe/56b30a2a72f64.png" />
 
+    <ion-tabs>
+      <ion-tab [root]="chatRoot" tabTitle="Chat" tabIcon="chat"></ion-tab>
+     </ion-tabs>
+
     <ion-card-content>
       <ion-card-title (click)="goToSaladPage($event)">
         Салаты и закуски
+        <ion-icon ios="ios-star-outline" md="md-star" (click)="changeToAddState($event)"> добавить в избранное</ion-icon>
+
       </ion-card-title>
+
     </ion-card-content>
   </ion-card>
   <ion-card>
@@ -65,6 +72,7 @@
       </ion-card-title>
     </ion-card-content>
   </ion-card>
+  
   <!-- <ion-segment-button value="Salad" (click)="goToSaladPage($event)">
       Салаты и закуски
     </ion-segment-button>

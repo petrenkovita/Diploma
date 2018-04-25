@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams/* , Platform, Nav  */} from 'ionic-angular';
 //import { PopularPage } from '../popular/popular';
 import { SaladPage } from '../salad/salad';
 import { DesertsPage } from '../deserts/deserts';
 import { SoupsPage } from '../soups/soups';
 import { BakeryPage } from '../bakery/bakery';
 import { DrinksPage } from '../drinks/drinks';
+//import { RecipeOnePage } from '../bakery/recipe1';
 
 @Component({
   selector: 'page-hello-ionic',
@@ -14,19 +15,20 @@ import { DrinksPage } from '../drinks/drinks';
 })
 export class HelloIonicPage {
   bar:string;
-  items; 
-
+  items;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.initializeItems();
+    this.initializeItems();    
+ 
   }
 
+
   initializeItems() {
-   /*  this.items = [
+    this.items = [
       'Apple',
       'Samsung',
       'Huawei',
       'Windows Phone'
-    ]; */
+    ];
   }
 
   getItems(ev) {
@@ -65,11 +67,17 @@ export class HelloIonicPage {
   }
 
   goToBakeryPage(event){
-    this.navCtrl.push(BakeryPage)
+    this.navCtrl.push(BakeryPage, {
+       
+    })
   }
 
   goToDrinksPage(event){
     this.navCtrl.push(DrinksPage)
+  }
+
+  changeToAddState(event){
+    
   }
 
  

@@ -1,20 +1,73 @@
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Готовим с удовольствием</ion-title>
-  </ion-navbar>
-</ion-header>
-
+    <ion-title>Готовить просто</ion-title>
+    <div id="child">
+          <ion-icon ios="ios-search-outline" md="md-search" (click)="openSearchPage($event)"></ion-icon>
+    </div>
+    
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+   
+  </ion-content>
 
 <ion-content>
-  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-  <!--   <ion-segment [(ngModel)]="bar">
- -->
-  <!-- <ion-segment-button value="Popular" (click)="goToPopularProduct($event)">
-      Популярные
-    </ion-segment-button> -->
+    <ion-list>
+        <ion-item (click)="goToSaladPage($event)">
+          <ion-img width="360" height="96" src="https://rud.ua/uploads/recipe/56b30a2a72f64.png"></ion-img>
+          <div id="text">
+              Салаты и закуски
+           <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" id="icon-forward"></ion-icon>
+          </div>
+          <div id="icon-document">
+            <ion-icon ios="ios-document" md="md-document"></ion-icon> Салаты и закуски
+          </div>
+        </ion-item>
+        <ion-item (click)="goToDesertsPage($event)">
+            <ion-img width="360" height="96" src="https://rud.ua/uploads/recipe/56b30ea7ef29b.png"></ion-img>
+          <div id="text">
+              Десерты
+            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" id="icon-forward"></ion-icon>
+          </div>
+          <div id="icon-document">
+            <ion-icon ios="ios-document" md="md-document"></ion-icon> Десерты
+          </div>
+        </ion-item>
+        <ion-item (click)="goToSoupsPage($event)">
+            <ion-img width="360" height="96" src="https://rud.ua/uploads/default/default-recipe.jpg"></ion-img>
+          <div id="text">
+              Первые блюда
+            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" id="icon-forward"></ion-icon>
+          </div>
+          <div id="icon-document">
+            <ion-icon ios="ios-document" md="md-document"></ion-icon>  Первые блюда
+          </div>
+        </ion-item>
+        <ion-item (click)="goToBakeryPage($event)">
+            <ion-img width="360" height="96" src="https://rud.ua/uploads/default/default-recipe.jpg"></ion-img>
+          <div id="text">
+              Выпечка
+            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" id="icon-forward"></ion-icon>
+          </div>
+          <div id="icon-document">
+            <ion-icon ios="ios-document" md="md-document"></ion-icon> Выпечка
+          </div>
+        </ion-item>
+        <ion-item (click)="goToDrinksPage($event)">
+            <ion-img width="360" height="96" src="https://rud.ua/uploads/recipe/56b305982c12e.png"></ion-img>
+          <div id="text">
+              Напитки
+            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" id="icon-forward"></ion-icon>
+          </div>
+          <div id="icon-document">
+            <ion-icon ios="ios-document" md="md-document"></ion-icon>  Напитки
+          </div>
+        </ion-item>
+      </ion-list>
+  <!--   
   <ion-card>
 
     <img src="https://rud.ua/uploads/recipe/56b30a2a72f64.png" />
@@ -72,8 +125,8 @@
       </ion-card-title>
     </ion-card-content>
   </ion-card>
-  
-  <!-- <ion-segment-button value="Salad" (click)="goToSaladPage($event)">
+   -->
+ <!--  <ion-segment-button value="Salad" (click)="goToSaladPage($event)">
       Салаты и закуски
     </ion-segment-button>
     <ion-segment-button value="Deserts" (click)="goToDesertsPage($event)">

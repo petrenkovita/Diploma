@@ -7,6 +7,7 @@ import { DesertsPage } from '../deserts/deserts';
 import { SoupsPage } from '../soups/soups';
 import { BakeryPage } from '../bakery/bakery';
 import { DrinksPage } from '../drinks/drinks';
+import { SearchPage } from '../search/search';
 //import { RecipeOnePage } from '../bakery/recipe1';
 
 @Component({
@@ -78,6 +79,10 @@ export class HelloIonicPage {
 
   changeToAddState(event){
     
+  }
+  
+  openSearchPage(event){
+    this.navCtrl.push(SearchPage)
   }
 
  

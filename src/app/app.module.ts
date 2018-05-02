@@ -4,8 +4,6 @@ import { IonicApp, IonicModule, IonicErrorHandler/* , DeepLinker */ } from 'ioni
 import { MyApp } from './app.component';
 
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ItemDetailsPage } from '../pages/item-details/item-details';
-import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,20 +14,20 @@ import { SoupsPage } from '../pages/soups/soups';
 import { BakeryPage } from '../pages/bakery/bakery';
 import { DrinksPage } from '../pages/drinks/drinks';
 import { RecipeOnePage } from '../pages/bakery/recipe1';
+import { SearchPage } from '../pages/search/search';
 
 @NgModule({
   declarations: [
     MyApp,
     HelloIonicPage,
-    ItemDetailsPage,
-    ListPage,
     PopularPage,
     SaladPage,
     DesertsPage,
     SoupsPage,
     BakeryPage,
     DrinksPage,
-    RecipeOnePage
+    RecipeOnePage,
+    SearchPage
   ],
   imports: [
     BrowserModule,
@@ -48,15 +46,14 @@ import { RecipeOnePage } from '../pages/bakery/recipe1';
   entryComponents: [
     MyApp,
     HelloIonicPage,
-    ItemDetailsPage,
-    ListPage,
     PopularPage,
     SaladPage,
     DesertsPage,
     SoupsPage,
     BakeryPage,
     DrinksPage,
-    RecipeOnePage
+    RecipeOnePage,
+    SearchPage
   ],
   providers: [
     StatusBar,

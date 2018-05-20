@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <title>Ionic App</title>
@@ -30,6 +31,7 @@
   <link href="build/main.css" rel="stylesheet">
 
 </head>
+
 <body>
 
   <!-- Ionic's root component and where the app will load -->
@@ -45,5 +47,30 @@
   <!-- The main bundle js is generated during the build process -->
   <script src="build/main.js"></script>
 
+  <script src="recipe.json"></script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDJA8wnERFx5vam1hFMsV08VUEamOzrw84",
+      authDomain: "my-diplom-project-1080f.firebaseapp.com",
+      databaseURL: "https://my-diplom-project-1080f.firebaseio.com",
+      projectId: "my-diplom-project-1080f",
+      storageBucket: "my-diplom-project-1080f.appspot.com",
+      messagingSenderId: "444482163608"
+    };
+    firebase.initializeApp(config);
+    
+    var ref = firebase.database().ref();
+
+    ref.on("value", function (snapshot) {
+      console.log(snapshot.val());
+    }, function (error) {
+      console.log("Error: " + error.code);
+    });
+  </script>
 </body>
+
 </html>

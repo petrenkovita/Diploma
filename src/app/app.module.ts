@@ -15,6 +15,22 @@ import { BakeryPage } from '../pages/bakery/bakery';
 import { DrinksPage } from '../pages/drinks/drinks';
 import { RecipeOnePage } from '../pages/bakery/recipe1';
 import { SearchPage } from '../pages/search/search';
+import { AdvisePage } from '../pages/advise/advise';
+import { LifeHackPage } from '../pages/lifeHack/life';
+import { TabsPage } from '../pages/tabs/tabs';
+import { HackOnePage } from '../pages/lifeHack/hask/hask1';
+
+import { AngularFireModule } from 'angularfire2';
+
+export const firebaseConfig =
+  {
+    apiKey: "AIzaSyDJA8wnERFx5vam1hFMsV08VUEamOzrw84",
+    authDomain: "my-diplom-project-1080f.firebaseapp.com",
+    databaseURL: "https://my-diplom-project-1080f.firebaseio.com",
+    projectId: "my-diplom-project-1080f",
+    storageBucket: "my-diplom-project-1080f.appspot.com",
+    messagingSenderId: "444482163608"
+  };
 
 @NgModule({
   declarations: [
@@ -27,17 +43,22 @@ import { SearchPage } from '../pages/search/search';
     BakeryPage,
     DrinksPage,
     RecipeOnePage,
-    SearchPage
+    SearchPage,
+    AdvisePage,
+    LifeHackPage,
+    TabsPage,
+    HackOnePage,
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     IonicModule.forRoot(MyApp, {}, {
       links: [
-        { component: BakeryPage, name:'Bakery', segment:'bakery'},
-        { component: DesertsPage, name:'Desert', segment:'desert', defaultHistory: [HelloIonicPage]},
-        { component: SaladPage, name:'Salad', segment:'salad'},
-        { component: SoupsPage, name:'Soup', segment:'soup'},
-        { component: HelloIonicPage, name:'HelloIonic', segment:'cookWithPleasure'}
+        { component: BakeryPage, name: 'Bakery', segment: 'bakery' },
+        { component: DesertsPage, name: 'Desert', segment: 'desert', defaultHistory: [HelloIonicPage] },
+        { component: SaladPage, name: 'Salad', segment: 'salad' },
+        { component: SoupsPage, name: 'Soup', segment: 'soup' },
+        { component: HelloIonicPage, name: 'HelloIonic', segment: 'cookWithPleasure' }
 
       ]
     }),
@@ -53,13 +74,17 @@ import { SearchPage } from '../pages/search/search';
     BakeryPage,
     DrinksPage,
     RecipeOnePage,
-    SearchPage
+    SearchPage,
+    AdvisePage,
+    LifeHackPage,
+    TabsPage,
+    HackOnePage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
 /*     DeepLinker,
- */    {provide: ErrorHandler, useClass: IonicErrorHandler}
+ */    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

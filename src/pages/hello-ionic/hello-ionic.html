@@ -11,124 +11,15 @@
 </ion-header>
 
 <ion-content>
-
-</ion-content>
-
-<ion-content>
   <ion-list>
-    <ion-item (click)="goToSaladPage($event)">
-      <ion-img width="360" height="96" src="https://rud.ua/uploads/recipe/56b30a2a72f64.png"></ion-img>
-      <div id="text">
-        Салаты и закуски
-        <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" id="icon-forward"></ion-icon>
-      </div>
-    </ion-item>
-    <ion-item (click)="goToDesertsPage($event)">
-      <ion-img width="360" height="96" src="https://rud.ua/uploads/recipe/56b30ea7ef29b.png"></ion-img>
-      <div id="text">
-        Десерты
-        <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" id="icon-forward"></ion-icon>
-      </div>
-    </ion-item>
-    <ion-item (click)="goToSoupsPage($event)">
-      <ion-img width="360" height="96" src="http://violetnotes.com/wp-content/uploads/2015/05/1405a-125.jpg"></ion-img>
-      <div id="text">
-        Первые блюда
-        <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" id="icon-forward"></ion-icon>
-      </div>
-    </ion-item>
-    <ion-item (click)="goToBakeryPage($event)">
-      <ion-img width="360" height="96" src="http://tvoirecepty.ru/files/imagecache/400x220/recepts/domashnyaya-vypechka-na-kazhdyi-den-luchshie-retsepty.jpg"></ion-img>
-      <div id="text">
-        Выпечка
-        <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" id="icon-forward"></ion-icon>
-      </div>
-    </ion-item>
-    <ion-item (click)="goToDrinksPage($event)">
-      <ion-img width="360" height="96" src="https://rud.ua/uploads/recipe/56b305982c12e.png"></ion-img>
-      <div id="text">
-        Напитки
-        <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" id="icon-forward"></ion-icon>
-      </div>
-    </ion-item>
+    <div class="category" *ngFor="let item of model.items">
+      <ion-item (click)="goToListPage(item)">
+        <ion-img width="360" height="96" src="{{item.imageUrl}}"></ion-img>
+        <div id="text">
+          {{item.name}}
+          <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" id="icon-forward"></ion-icon>
+        </div>
+      </ion-item>
+    </div>
   </ion-list>
-  <!--   
-  <ion-card>
-
-    <img src="https://rud.ua/uploads/recipe/56b30a2a72f64.png" />
-
-    <ion-tabs>
-      <ion-tab [root]="chatRoot" tabTitle="Chat" tabIcon="chat"></ion-tab>
-     </ion-tabs>
-
-    <ion-card-content>
-      <ion-card-title (click)="goToSaladPage($event)">
-        Салаты и закуски
-        <ion-icon ios="ios-star-outline" md="md-star" (click)="changeToAddState($event)"> добавить в избранное</ion-icon>
-
-      </ion-card-title>
-
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-
-    <img src="https://rud.ua/uploads/recipe/56b30ea7ef29b.png" />
-
-    <ion-card-content>
-      <ion-card-title (click)="goToDesertsPage($event)">
-        Десерты
-      </ion-card-title>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-
-    <img src="https://rud.ua/uploads/default/default-recipe.jpg" />
-
-    <ion-card-content>
-      <ion-card-title (click)="goToSoupsPage($event)">
-        Первые блюда
-      </ion-card-title>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-
-    <img src="https://rud.ua/uploads/recipe/56b30c139cb48.png" />
-
-    <ion-card-content>
-      <ion-card-title (click)="goToBakeryPage($event)">
-        Выпечка
-      </ion-card-title>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-
-    <img src="https://rud.ua/uploads/recipe/56b305982c12e.png" />
-
-    <ion-card-content>
-      <ion-card-title (click)="goToDrinksPage($event)">
-        Напитки
-      </ion-card-title>
-    </ion-card-content>
-  </ion-card>
-   -->
-  <!--  <ion-segment-button value="Salad" (click)="goToSaladPage($event)">
-      Салаты и закуски
-    </ion-segment-button>
-    <ion-segment-button value="Deserts" (click)="goToDesertsPage($event)">
-      Десерты
-    </ion-segment-button>
-    <ion-segment-button value="Soups" (click)="goToSoupsPage($event)">
-      Первые блюда
-    </ion-segment-button>
-    <ion-segment-button value="Bakery" (click)="goToBakeryPage($event)">
-      Выпечка
-    </ion-segment-button>
-    <ion-segment-button value="Drink" (click)="goToDrinksPage($event)">
-      Напитки
-    </ion-segment-button> -->
-
-  <!--   </ion-segment>
- -->
-
-
 </ion-content>

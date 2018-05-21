@@ -2,15 +2,15 @@ import { Component } from '@angular/core';
 
 
 import { AdvisePage } from '../advise/advise';
-import { HelloIonicPage } from '../hello-ionic/hello-ionic';
 import { LifeHackPage } from '../lifeHack/life';
+import { MainPageComponent } from '../main-page/main-page.component';
 
 @Component({
     templateUrl: 'tabs.html'
 })
 export class TabsPage {
 
-    HomeTab = HelloIonicPage;
+    HomeTab = MainPageComponent;
     AdviseTab = AdvisePage;
     LifeHackTab = LifeHackPage;
 

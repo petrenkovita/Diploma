@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
 
 import { NavController, NavParams/* , Platform, Nav  */ } from 'ionic-angular';
-//import { PopularPage } from '../popular/popular';
-import { SaladPage } from '../salad/salad';
-// import { SearchPage } from '../search/search';
+import { SearchPage } from '../search/search';
 import { categories } from '../../api/data';
+import { CategoriesPageComponent } from '../categories/categories.component';
 
 @Component({
-  selector: 'page-hello-ionic',
-  templateUrl: 'hello-ionic.html'
+  selector: 'main-page',
+  templateUrl: 'main-page.component.html'
 })
-export class HelloIonicPage {
+export class MainPageComponent {
 
   model: any ={
     items: [    
@@ -21,14 +20,14 @@ export class HelloIonicPage {
  
     this.model.items = categories.categories;
   }
-  /*  goToPopularProduct(event){
-     this.navCtrl.push(PopularPage,{
-     })
-   } */
+
+  openSearchPage(){
+    this.navCtrl.push(SearchPage)
+  }
 
    goToListPage(category) {
      console.log(category);
-    this.navCtrl.push(SaladPage, {categoryId: category.id})
+    this.navCtrl.push(CategoriesPageComponent, {categoryId: category.id})
   }
 } 
 

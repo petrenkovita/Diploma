@@ -3,17 +3,11 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler/* , DeepLinker */ } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
+import { MainPageComponent } from '../pages/main-page/main-page.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { PopularPage } from '../pages/popular/popular';
-import { SaladPage } from '../pages/salad/salad';
-import { DesertsPage } from '../pages/deserts/deserts';
-import { SoupsPage } from '../pages/soups/soups';
-import { BakeryPage } from '../pages/bakery/bakery';
-import { DrinksPage } from '../pages/drinks/drinks';
-import { RecipeOnePage } from '../pages/bakery/recipe1';
 import { SearchPage } from '../pages/search/search';
 import { AdvisePage } from '../pages/advise/advise';
 import { LifeHackPage } from '../pages/lifeHack/life';
@@ -21,6 +15,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { HackOnePage } from '../pages/lifeHack/hask/hask1';
 
 import { AngularFireModule } from 'angularfire2';
+import { CategoriesPageComponent } from '../pages/categories/categories.component';
 
 export const firebaseConfig =
   {
@@ -35,14 +30,9 @@ export const firebaseConfig =
 @NgModule({
   declarations: [
     MyApp,
-    HelloIonicPage,
+    MainPageComponent,
     PopularPage,
-    SaladPage,
-    DesertsPage,
-    SoupsPage,
-    BakeryPage,
-    DrinksPage,
-    RecipeOnePage,
+    CategoriesPageComponent,
     SearchPage,
     AdvisePage,
     LifeHackPage,
@@ -54,11 +44,8 @@ export const firebaseConfig =
     AngularFireModule.initializeApp(firebaseConfig),
     IonicModule.forRoot(MyApp, {}, {
       links: [
-        { component: BakeryPage, name: 'Bakery', segment: 'bakery' },
-        { component: DesertsPage, name: 'Desert', segment: 'desert', defaultHistory: [HelloIonicPage] },
-        { component: SaladPage, name: 'Salad', segment: 'salad' },
-        { component: SoupsPage, name: 'Soup', segment: 'soup' },
-        { component: HelloIonicPage, name: 'HelloIonic', segment: 'cookWithPleasure' }
+        { component: CategoriesPageComponent, name: 'categories', segment: 'categories' },
+        { component: MainPageComponent, name: 'HelloIonic', segment: 'cookWithPleasure' }
 
       ]
     }),
@@ -66,14 +53,9 @@ export const firebaseConfig =
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HelloIonicPage,
+    MainPageComponent,
     PopularPage,
-    SaladPage,
-    DesertsPage,
-    SoupsPage,
-    BakeryPage,
-    DrinksPage,
-    RecipeOnePage,
+    CategoriesPageComponent,
     SearchPage,
     AdvisePage,
     LifeHackPage,

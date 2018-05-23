@@ -14,18 +14,10 @@ import { LifeHackPage } from '../pages/lifeHack/life';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HackOnePage } from '../pages/lifeHack/hask/hask1';
 
-import { AngularFireModule } from 'angularfire2';
 import { CategoriesPageComponent } from '../pages/categories/categories.component';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
-export const firebaseConfig =
-  {
-    apiKey: "AIzaSyDJA8wnERFx5vam1hFMsV08VUEamOzrw84",
-    authDomain: "my-diplom-project-1080f.firebaseapp.com",
-    databaseURL: "https://my-diplom-project-1080f.firebaseio.com",
-    projectId: "my-diplom-project-1080f",
-    storageBucket: "my-diplom-project-1080f.appspot.com",
-    messagingSenderId: "444482163608"
-  };
 
 @NgModule({
   declarations: [
@@ -41,7 +33,8 @@ export const firebaseConfig =
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+    HttpClientModule,
+    HttpModule,
     IonicModule.forRoot(MyApp, {}, {
       links: [
         { component: CategoriesPageComponent, name: 'categories', segment: 'categories' },

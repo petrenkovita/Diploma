@@ -29,6 +29,7 @@ export class MainPageComponent {
      console.log(category);
     this.navCtrl.push(CategoriesPageComponent, {categoryId: category.id})
   }
+  
 } 
 
 

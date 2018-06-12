@@ -17,7 +17,7 @@ import { HackOnePage } from '../pages/lifeHack/hask/hask1';
 import { CategoriesPageComponent } from '../pages/categories/categories.component';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-import { DetailsPage } from '../pages/details/details.component';
+import { DetailsPageComponent } from '../pages/details/details.component';
 
 
 @NgModule({
@@ -31,7 +31,7 @@ import { DetailsPage } from '../pages/details/details.component';
     LifeHackPage,
     TabsPage,
     HackOnePage,
-    DetailsPage,
+    DetailsPageComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +56,7 @@ import { DetailsPage } from '../pages/details/details.component';
     LifeHackPage,
     TabsPage,
     HackOnePage,
-    DetailsPage,
+    DetailsPageComponent
   ],
   providers: [
     StatusBar,

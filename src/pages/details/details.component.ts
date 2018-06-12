@@ -1,19 +1,13 @@
-import { Component } from '@angular/core';
-import { ViewController } from 'ionic-angular/umd';
-//import { HttpClient } from '@angular/common/http';
+import { Component } from "@angular/core";
+//import { ViewController } from "ionic-angular/umd";
 
 @Component({
-    selector: 'details-page',
+    selector:'details',
     templateUrl: 'details.component.html'
 })
-export class DetailsPage {
-    reciepts: any = [];
-    category: any;
-
-    constructor(public viewCtrl: ViewController) {
-
+export class DetailsPageComponent {
+    constructor(/* public viewCtrl: ViewController */) {
+        
     }
-    dismiss() {
-        this.viewCtrl.dismiss();
-    }
+    
 }

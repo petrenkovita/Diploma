@@ -1,19 +1,23 @@
 <ion-header>
     <ion-navbar>
-        <ion-title align="center">Лайфхаки</ion-title>
+        <ion-title align="center">LifeHack</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content>
-    <div id="main-page">
-        <p id="introduction">Кухонные лайфхаки очень популярны и с помощью них вы сможете сэкономить свое время на приготовление еды. Эти подборки
-            полезных советов для хозяюшек постоянно наполняется. Еще в этой метке публикуются и кулинарные хитрости которые
-            помогут приготовить вам очень вкусные и красивые блюда от которых пальчики оближите.</p>
-        <h4>Как расколоть и открыть кокос</h4>
-        <p id="1">
-            Словосочетание «кокосовый орех», которое регулярно употребляется, ошибочно. Фактически, это плод «костянка», со всех сторон
-            покрытый волокнами. В продажу они, чаще всего, поступают уже «голенькими», что и придает им...</p>
-        <button id="read-more" (click)="hask1($event)">Читать дальше</button>
+    <div class="main-page">
+        <h4 class="hackTitle" align="center">{{model.title}}</h4>
+        <p class="hackText">Are you a home chef? Do you look forward to the time you spend in the kitchen, whipping up your newest concoction?
+            Whether you’re a veteran or a novice, whether you’re the next at-home Rachel Ray or you can’t tell a teaspoon
+            from a tablespoon, everyone can use some handy tricks to make cooking easier.</p>
+        <img src="/assets/hack/1.jpg" />
+        <div *ngFor="let item of model.items">
+            <h4 class="hackName">{{item.hackName}}</h4>
+            <img src="{{item.hackImg}}" />
+<!--             <iframe  height="250" width="350" src="{{item.videoUrl}}" frameborder="0" allowfullscreen></iframe>
+ -->            <p class="hackText">{{item.hackText}}</p>
+        </div>
 
-    </div>
-</ion-content>
+   
+
+ </div></ion-content>

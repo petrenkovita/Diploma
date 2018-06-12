@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams, ModalController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { categories } from '../../api/data';
 import { HttpClient } from '@angular/common/http';
-import { DetailsPage } from '../details/details.component';
+import { DetailsPageComponent } from '../details/details.component';
 
 @Component({
   selector: 'category',
@@ -21,7 +21,7 @@ export class CategoriesPageComponent implements OnInit {
   urls: string = "http://api.yummly.com/v1/api/recipes?_app_id=726f2fd1&_app_key=f942650ffcb77bab53f48d4cfb628a1b&q=";
   public elements: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
     const id = navParams.data.categoryId;
     console.log('category id :', navParams.data.categoryId);
 
@@ -40,8 +40,8 @@ export class CategoriesPageComponent implements OnInit {
   }
 
   openDetailsPage() {
-    let modal = this.modalCtrl.create(DetailsPage);
-    modal.present();  }
+    this.navCtrl.push(DetailsPageComponent)
+  }
 }
 
 interface IReciept {

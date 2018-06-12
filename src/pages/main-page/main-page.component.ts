@@ -26,7 +26,6 @@ export class MainPageComponent {
   }
 
    goToListPage(category) {
-     console.log(category);
     this.navCtrl.push(CategoriesPageComponent, {categoryId: category.id})
   }
   

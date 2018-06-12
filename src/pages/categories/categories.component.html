@@ -1,20 +1,19 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-    </button>
     <ion-title align="center">{{category.name}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor="let item of reciepts" (click)="goToDetails(item)">
+  <ion-card *ngFor="let element of reciepts" (click)="openDetailsPage()">
 
-    <img src="https://rud.ua/uploads/recipe/56b30a2a72f64.png" />
+    <img width="115" height="92" src={{element.smallImageUrls}}/>
 
     <ion-card-content>
       <ion-card-title>
-        {{item.name}} 
+        {{element.sourceDisplayName}}
       </ion-card-title>
     </ion-card-content>
+    
   </ion-card>
 </ion-content>

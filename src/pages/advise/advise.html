@@ -6,8 +6,8 @@
 
 <ion-content>
     <ion-content>
-        <div id="main-page">
-            <h2 class="tipsTitle" align="center">20 Tips for a Better Kitchen</h2>
+        <div id="main-page" *ngFor="let item of model.items">
+            <h2 class="tipsTitle" align="center">{{model.title}}</h2>
             <p class="tipsDescription">
                 Today's kitchens are often the heart of the home. Therefore, careful planning is required to ensure a kitchen that's both
                 beautiful and highly functional. Here are 20 tips to consider when designing your kitchen.

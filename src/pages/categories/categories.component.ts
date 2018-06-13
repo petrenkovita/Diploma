@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { categories } from '../../api/data';
 import { HttpClient } from '@angular/common/http';
-import { DetailsPageComponent } from '../details/details.component';
 
 @Component({
   selector: 'category',
@@ -39,9 +38,9 @@ export class CategoriesPageComponent implements OnInit {
       });
   }
 
-  openDetailsPage() {
-    this.navCtrl.push(DetailsPageComponent)
-  }
+  /*  openDescriptionPage() {
+    this.navCtrl.push(DescriptionComponent)
+  }  */
 }
 
 interface IReciept {

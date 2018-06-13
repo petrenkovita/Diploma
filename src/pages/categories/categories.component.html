@@ -5,13 +5,15 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor="let element of reciepts" (click)="openDetailsPage()">
+  <ion-card *ngFor="let element of reciepts">
 
     <img width="115" height="92" src={{element.smallImageUrls}}/>
 
     <ion-card-content>
       <ion-card-title>
-        {{element.sourceDisplayName}}
+        <div class="displayName">
+          {{element.sourceDisplayName}}
+        </div>
       </ion-card-title>
     </ion-card-content>
 

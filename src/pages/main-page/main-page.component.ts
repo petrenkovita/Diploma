@@ -12,7 +12,7 @@ import { CategoriesPageComponent } from '../categories/categories.component';
 export class MainPageComponent {
 
   model: any ={
-    items: [    
+    items: [  
     ]
   }
 
@@ -30,7 +30,6 @@ export class MainPageComponent {
   }
   
 } 
-
 
 
 

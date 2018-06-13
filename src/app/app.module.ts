@@ -7,31 +7,23 @@ import { MainPageComponent } from '../pages/main-page/main-page.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { PopularPage } from '../pages/popular/popular';
 import { SearchPage } from '../pages/search/search';
 import { AdvisePage } from '../pages/advise/advise';
 import { LifeHackPage } from '../pages/lifeHack/life';
 import { TabsPage } from '../pages/tabs/tabs';
-import { HackOnePage } from '../pages/lifeHack/hask/hask1';
-
 import { CategoriesPageComponent } from '../pages/categories/categories.component';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-import { DetailsPageComponent } from '../pages/details/details.component';
-
 
 @NgModule({
   declarations: [
     MyApp,
     MainPageComponent,
-    PopularPage,
     CategoriesPageComponent,
     SearchPage,
     AdvisePage,
     LifeHackPage,
     TabsPage,
-    HackOnePage,
-    DetailsPageComponent
   ],
   imports: [
     BrowserModule,
@@ -49,14 +41,11 @@ import { DetailsPageComponent } from '../pages/details/details.component';
   entryComponents: [
     MyApp,
     MainPageComponent,
-    PopularPage,
     CategoriesPageComponent,
     SearchPage,
     AdvisePage,
     LifeHackPage,
     TabsPage,
-    HackOnePage,
-    DetailsPageComponent
   ],
   providers: [
     StatusBar,

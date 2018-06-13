@@ -2,6 +2,7 @@ import {Http} from '@angular/http';
 import {categories} from '../../api/data';
 import {Component} from '@angular/core';
 import {NavParams, NavController} from 'ionic-angular';
+import { CategoriesPageComponent } from '../categories/categories.component';
 
 @Component({
   selector: 'page-search',
@@ -15,6 +16,9 @@ export class SearchPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
 
     this.initializeItems();
+  }
+  goToListPage(category) {
+    this.navCtrl.push(CategoriesPageComponent, {categoryId: category.id})
   }
 
   initializeItems() {

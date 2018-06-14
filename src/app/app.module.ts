@@ -14,6 +14,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { CategoriesPageComponent } from '../pages/categories/categories.component';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { DefinitionComponent } from '../pages/def/def.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     AdvisePage,
     LifeHackPage,
     TabsPage,
+    DefinitionComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +48,7 @@ import { HttpClientModule } from '@angular/common/http';
     AdvisePage,
     LifeHackPage,
     TabsPage,
+    DefinitionComponent
   ],
   providers: [
     StatusBar,

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler/* , DeepLinker */ } from 'ionic-angular';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { MainPageComponent } from '../pages/main-page/main-page.component';
@@ -35,7 +35,6 @@ import { DefinitionComponent } from '../pages/def/def.component';
       links: [
         { component: CategoriesPageComponent, name: 'categories', segment: 'categories' },
         { component: MainPageComponent, name: 'HelloIonic', segment: 'cookWithPleasure' }
-
       ]
     }),
   ],

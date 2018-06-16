@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController, NavParams/* , Platform, Nav  */ } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { SearchPage } from '../search/search';
 import { categories } from '../../api/data';
 import { CategoriesPageComponent } from '../categories/categories.component';
@@ -11,25 +11,25 @@ import { CategoriesPageComponent } from '../categories/categories.component';
 })
 export class MainPageComponent {
 
-  model: any ={
-    items: [  
+  model: any = {
+    items: [
     ]
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
- 
+
     this.model.items = categories.categories;
   }
 
-  openSearchPage(){
+  openSearchPage() {
     this.navCtrl.push(SearchPage)
   }
 
-   goToListPage(category) {
-    this.navCtrl.push(CategoriesPageComponent, {categoryId: category.id})
+  goToListPage(category) {
+    this.navCtrl.push(CategoriesPageComponent, { categoryId: category.id })
   }
-  
-} 
+
+}
 
 
 

@@ -3,23 +3,15 @@ import { NavController, NavParams } from 'ionic-angular';
 import { categories } from '../../api/data';
 import { HttpClient } from '@angular/common/http';
 import { DefinitionComponent } from '../def/def.component';
+import { baseUrl } from '../../app/http.client';
 
 @Component({
   selector: 'category',
   templateUrl: 'categories.component.html'
 })
 export class CategoriesPageComponent implements OnInit {
-
-  /*   matches = {
-     sourceDisplayName: 'string',
-     ingredients: 'string',
-     smallImageUrls: 'string',
-     totalTimeInSeconds: 'number'
-   };   */
   reciepts: any = [];
   category: any;
-  urls: string = "http://api.yummly.com/v1/api/recipes?_app_id=726f2fd1&_app_key=f942650ffcb77bab53f48d4cfb628a1b&q=";
-  public elements: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
     const id = navParams.data.categoryId;
@@ -31,7 +23,7 @@ export class CategoriesPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.get('http://api.yummly.com/v1/api/recipes?_app_id=726f2fd1&_app_key=f942650ffcb77bab53f48d4cfb628a1b&q=' + this.category["searchString"])
+    this.http.get(baseUrl + this.category["searchString"])
       .subscribe((result: any) => {
         const { matches } = result;
         this.reciepts = matches;
@@ -42,9 +34,4 @@ export class CategoriesPageComponent implements OnInit {
   openDescriptionPage() {
     this.navCtrl.push(DefinitionComponent)
   }
-}
-
-interface IReciept {
-  recipeName: string,
-  rating: number
 }

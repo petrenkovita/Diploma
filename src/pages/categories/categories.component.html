@@ -5,14 +5,14 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor="let element of reciepts">
+  <ion-card *ngFor="let reciept of reciepts" (click)="openDescriptionPage()">
 
-    <img width="115" height="92" src={{element.smallImageUrls}}/>
+    <img width="115" height="92" src={{reciept.smallImageUrls}}/>
 
     <ion-card-content>
       <ion-card-title>
         <div class="displayName">
-          {{element.sourceDisplayName}}
+          {{reciept.sourceDisplayName}}
         </div>
       </ion-card-title>
     </ion-card-content>

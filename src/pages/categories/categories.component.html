@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor="let reciept of reciepts" (click)="openDescriptionPage()">
+  <ion-card *ngFor="let reciept of reciepts" (click)="openDescriptionPage(reciept)">
 
     <img width="115" height="92" src={{reciept.smallImageUrls}}/>
 

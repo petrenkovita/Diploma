@@ -34,7 +34,8 @@ import { DefinitionComponent } from '../pages/def/def.component';
     IonicModule.forRoot(MyApp, {}, {
       links: [
         { component: CategoriesPageComponent, name: 'categories', segment: 'categories' },
-        { component: MainPageComponent, name: 'HelloIonic', segment: 'cookWithPleasure' }
+        { component: MainPageComponent, name: 'HelloIonic', segment: 'cookWithPleasure' },
+        { component: DefinitionComponent, name: 'recipe', segment: 'recipe' }
       ]
     }),
   ],

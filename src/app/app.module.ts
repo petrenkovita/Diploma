@@ -14,7 +14,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { CategoriesPageComponent } from '../pages/categories/categories.component';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-import { DefinitionComponent } from '../pages/def/def.component';
+import { DescriptionComponent } from '../pages/description/description.component';
+import { RecipeFilterComponent } from '../pages/recipe-filter/recipe-filter.component';
+import { DetailsComponent } from '../pages/details.component/details.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { DefinitionComponent } from '../pages/def/def.component';
     AdvisePage,
     LifeHackPage,
     TabsPage,
-    DefinitionComponent
+    DescriptionComponent,
+    RecipeFilterComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,7 @@ import { DefinitionComponent } from '../pages/def/def.component';
       links: [
         { component: CategoriesPageComponent, name: 'categories', segment: 'categories' },
         { component: MainPageComponent, name: 'HelloIonic', segment: 'cookWithPleasure' },
-        { component: DefinitionComponent, name: 'recipe', segment: 'recipe' }
+        { component: DescriptionComponent, name: 'recipe', segment: 'recipe' }
       ]
     }),
   ],
@@ -48,7 +52,9 @@ import { DefinitionComponent } from '../pages/def/def.component';
     AdvisePage,
     LifeHackPage,
     TabsPage,
-    DefinitionComponent
+    DescriptionComponent,
+    RecipeFilterComponent,
+    DetailsComponent
   ],
   providers: [
     StatusBar,

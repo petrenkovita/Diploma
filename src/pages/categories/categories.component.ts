@@ -2,14 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { categories } from '../../api/data';
 import { HttpClient } from '@angular/common/http';
-import { DefinitionComponent } from '../def/def.component';
 import { baseUrl } from '../../app/http.client';
 import { IRecipe, ICategory } from '../../interface.shared';
+import { DetailsComponent } from '../details.component/details.component';
 
 @Component({
   selector: 'category',
   templateUrl: 'categories.component.html'
 })
+
 export class CategoriesPageComponent implements OnInit {
   reciepts: IRecipe[] = [];
   category: ICategory;
@@ -27,11 +28,12 @@ export class CategoriesPageComponent implements OnInit {
       .subscribe((result: any) => {
         const { matches } = result;
         this.reciepts = matches;
+        console.log(this.reciepts)
       });
   }
 
   openDescriptionPage(recipe: IRecipe) {
-    this.navCtrl.push(DefinitionComponent, {
+    this.navCtrl.push(DetailsComponent, {
       id: recipe.id
     })
   }

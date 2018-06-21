@@ -14,7 +14,6 @@ export class SearchPage {
   category: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
-
     this.initializeItems();
   }
   goToListPage(category) {

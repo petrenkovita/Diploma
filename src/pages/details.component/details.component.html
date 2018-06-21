@@ -1,0 +1,17 @@
+<ion-header>
+        <ion-navbar>
+            <ion-title align="center">{{recipeName}} </ion-title>
+        </ion-navbar>
+    </ion-header>
+    <ion-content class="back">
+        <ion-list>
+            <p class="displayName"><a href="{{recipeSource}}">Recipe Name: {{recipeName}}</a></p>
+            <p class="including-ingredient">Yield: {{recipeYield}}</p>
+            <p class="including-ingredient">Cook Time: {{recipeTotalTime}}</p>
+            <p class="including-ingredient">Recipe Ingredient: </p><ul *ngFor="let item of recipeIngredientLines"><li>{{item}}</li></ul>
+            <p class="including-ingredient">Number Of Servings: {{recipeNumberOfServings}}</p>
+            <p class="including-ingredient">Rating: {{recipeRating}}</p>
+               <img class="img" src="{{recipeImages}}"/> 
+            
+        </ion-list>
+    </ion-content>

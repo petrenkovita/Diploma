@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Recipe Book</ion-title>
+        <div id="child">
+            <ion-icon ios="ios-search-outline" md="md-search" (click)="openSearchPage()"></ion-icon>
+        </div>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <div class="category-with-filter" *ngFor="let item of model.items">
+            <ion-item (click)="goToListPage(item)">
+                <ion-img width="360" height="96" src="{{item.imageUrl}}"></ion-img>
+                <div class="text">
+                    {{item.name}}
+                    <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" id="icon-forward"></ion-icon>
+                </div>
+            </ion-item>
+        </div>
+    </ion-list>
+</ion-content>
